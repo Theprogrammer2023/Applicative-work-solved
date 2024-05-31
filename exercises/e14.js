@@ -5,7 +5,11 @@ import { data } from "../data/data";
 // Return example: 234234.234
 
 export function getOrbitalPeriodsSum(data) {
-  // Your code goes here...
+  if (!data || !data.asteroids || !Array.isArray(data.asteroids)) {
+    return 0;
+  }
+
+  return data.asteroids.reduce((sum, asteroid) => sum + asteroid.orbitalPeriod, 0);
 }
 
 
