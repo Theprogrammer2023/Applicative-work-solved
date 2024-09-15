@@ -5,10 +5,6 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-  if (!data || !data.asteroids || !Array.isArray(data.asteroids)) {
-    return [];
-  }
-  
   return data.asteroids.map(asteroid => asteroid.name);
 }
 
